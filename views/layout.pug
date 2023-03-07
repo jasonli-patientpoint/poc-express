@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if authenticated
+        form(method="post", action="/logout")
+          button(type="submit") Logout
+    else
+        form(method="get", action="/login")
+          button(type="submit") Login
+
+    block content    
